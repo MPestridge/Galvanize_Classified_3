@@ -1,0 +1,21 @@
+<div>
+  <input id="search" name="search" type="search" class="form-control input-sm search-form" placeholder="Search" ng-model="$ctrl.searchText">
+  <div class="dropdown">
+    <button class="dropbtn">Sort By: {{$ctrl.currentName}}</button>
+    <div class="dropdown-content">
+      <li class="sort-list" ng-repeat="value in $ctrl.sortValue" ng-click="$ctrl.valueFinder(value)">
+        <a>{{value}}</a>
+      </li>
+    </div>
+  </div>
+    <button ui-sref="postForm">New Post</button>
+  <div ng-repeat="post in $ctrl.posts | filter : $ctrl.searchText | orderBy: $ctrl.currentValue">
+    <h4>Title: </h4><p>{{post.title}}</p>
+    <h4>Description: </h4><p>{{post.description}}</p>
+    <h4>Price: </h4><p>${{post.price}}</p>
+    <h4>Item Image: </h4><img ng-src='{{post.item_image}}' alt="Post Image"/>
+    <h4>Created At: </h4><p>{{post.created_at| date:'medium'}}</p>
+    <button ui-sref="editForm({id:post.id})">Edit</button>
+    <button ng-click="$ctrl.postDelete(post.id)" >Delete</button>
+  </div>
+</div>

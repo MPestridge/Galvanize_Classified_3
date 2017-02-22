@@ -1,0 +1,13 @@
+<div>
+  <form name="$ctrl.editForm">
+    <label>Title:</label>
+    <input id="editTitle" name="editTitle" ng-model="$ctrl.edit.title" type="text" required>
+    <label>Description:</label>
+    <input id="editDescription" name="editDescription"  type="text" ng-model="$ctrl.edit.description" value="Enter a description here" required>
+    <label>Price:</label>
+    <input id="editPrice" name="editPrice" type="text" ng-model="$ctrl.edit.price" value="Enter a price here" required>
+    <label>Item Image:</label>
+    <input id="editItemImage" name="editItemImage" type="text" value="Enter an item image here" ng-model="$ctrl.edit.item_image" required>
+    <button ng-click="$ctrl.postEdit()">Submit Edit</button>
+  </form>
+</div>

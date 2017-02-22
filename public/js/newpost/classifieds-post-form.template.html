@@ -1,0 +1,11 @@
+<form name="$ctrl.postForm" ng-submit="$ctrl.postSubmission()">
+  <label>Title:</label>
+  <input id="title" name="title" ng-model="$ctrl.post.title" type="text" placeholder="Enter a title here" required>
+  <label>Description:</label>
+  <input id="description" name="description"  type="text" ng-model="$ctrl.post.description" placeholder="Enter a description here" required>
+  <label>Price:</label>
+  <input id="price" name="price" type="text" ng-model="$ctrl.post.price" placeholder="Enter a price here" required>
+  <label>Item Image:</label>
+  <input id="itemImage" name="itemImage" type="text" ng-model="$ctrl.post.item_image" placeholder="Enter an item image here" required>
+  <button type="submit">Post</button>
+</form>
