@@ -1,13 +1,25 @@
-<div>
-  <form name="$ctrl.editForm">
-    <label>Title:</label>
-    <input id="editTitle" name="editTitle" ng-model="$ctrl.edit.title" type="text" required>
-    <label>Description:</label>
-    <input id="editDescription" name="editDescription"  type="text" ng-model="$ctrl.edit.description" value="Enter a description here" required>
-    <label>Price:</label>
-    <input id="editPrice" name="editPrice" type="text" ng-model="$ctrl.edit.price" value="Enter a price here" required>
-    <label>Item Image:</label>
-    <input id="editItemImage" name="editItemImage" type="text" value="Enter an item image here" ng-model="$ctrl.edit.item_image" required>
-    <button ng-click="$ctrl.postEdit()">Submit Edit</button>
-  </form>
+<div class="row edit-form">
+  <div class="panel panel-default col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+    <div class="from-group">
+      <form name="$ctrl.editForm">
+        <label class="col-lg-2">Title:</label>
+        <div class="col-lg-10">
+          <input id="editTitle" name="editTitle" ng-model="$ctrl.edit.title" type="text" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Description:</label>
+        <div class="col-lg-10">
+          <input id="editDescription" name="editDescription"  type="text" ng-model="$ctrl.edit.description" value="Enter a description here" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Price:</label>
+        <div class="col-lg-10">
+          <input id="editPrice" name="editPrice" type="text" ng-model="$ctrl.edit.price" value="Enter a price here" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Item Image:</label>
+        <div class="col-lg-10">
+          <input id="editItemImage" name="editItemImage" type="text" value="Enter an item image here" ng-model="$ctrl.edit.item_image" class="form-control" required>
+        </div>
+        <button ng-click="$ctrl.postEdit()" class="btn btn-primary edit-form-button">Submit Edit</button>
+      </form>
+    </div>
+  </div>
 </div>

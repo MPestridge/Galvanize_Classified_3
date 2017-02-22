@@ -1,5 +1,9 @@
 <div>
-  <input id="search" name="search" type="search" class="form-control input-sm search-form" placeholder="Search" ng-model="$ctrl.searchText">
+  <div class="row">
+    <div class="col-lg-6">
+      <input id="search" name="search" type="search" class="form-control input-sm search-form col-lg-6 col-md-6 col-s-12 col-xs-12" placeholder="Search" ng-model="$ctrl.searchText">
+    </div>
+  </div>
   <div class="dropdown">
     <button class="dropbtn">Sort By: {{$ctrl.currentName}}</button>
     <div class="dropdown-content">
@@ -8,14 +12,50 @@
       </li>
     </div>
   </div>
-    <button ui-sref="postForm">New Post</button>
-  <div ng-repeat="post in $ctrl.posts | filter : $ctrl.searchText | orderBy: $ctrl.currentValue">
-    <h4>Title: </h4><p>{{post.title}}</p>
-    <h4>Description: </h4><p>{{post.description}}</p>
-    <h4>Price: </h4><p>${{post.price}}</p>
-    <h4>Item Image: </h4><img ng-src='{{post.item_image}}' alt="Post Image"/>
-    <h4>Created At: </h4><p>{{post.created_at| date:'medium'}}</p>
-    <button ui-sref="editForm({id:post.id})">Edit</button>
-    <button ng-click="$ctrl.postDelete(post.id)" >Delete</button>
+    <button ui-sref="postForm" class="btn btn-primary">New Post</button>
+  <div class="row post-panel-container">
+    <div ng-repeat="post in $ctrl.posts | filter : $ctrl.searchText | orderBy: $ctrl.currentValue">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+          <div class="row">
+            <div class="col-lg-2">
+              <h4>Title: </h4>
+            </div>
+            <div class="body-info col-lg-10">
+              <p>{{post.title}}</p>
+            </div>
+          </div>
+          <h4>Description: </h4><p>{{post.description}}</p>
+          <div class="row">
+            <div class="col-lg-2">
+              <h4>Price: </h4>
+            </div>
+            <div class="body-info col-lg-10">
+              <p>${{post.price}}</p>
+            </div>
+          </div>
+          <h4>Item Image: </h4>
+          <div class="row">
+            <div class="container-fluid img-container">
+              <img ng-src='{{post.item_image}}' alt="Post Image" class="img-block image-responsive"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <h4>Created At: </h4>
+            </div>
+            <div class="body-info col-lg-6 col-lg-offset-2">
+              <p>{{post.created_at| date:'medium'}}</p>
+            </div>
+          </div>
+          <div class="row panel-btns">
+            <div class="col-lg-offset-3">
+              <button ui-sref="editForm({id:post.id})" class="edit-btn btn">Edit</button>
+              <button ng-click="$ctrl.postDelete(post.id)" class="btn delete-btn">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

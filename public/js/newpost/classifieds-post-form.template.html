@@ -1,11 +1,25 @@
-<form name="$ctrl.postForm" ng-submit="$ctrl.postSubmission()">
-  <label>Title:</label>
-  <input id="title" name="title" ng-model="$ctrl.post.title" type="text" placeholder="Enter a title here" required>
-  <label>Description:</label>
-  <input id="description" name="description"  type="text" ng-model="$ctrl.post.description" placeholder="Enter a description here" required>
-  <label>Price:</label>
-  <input id="price" name="price" type="text" ng-model="$ctrl.post.price" placeholder="Enter a price here" required>
-  <label>Item Image:</label>
-  <input id="itemImage" name="itemImage" type="text" ng-model="$ctrl.post.item_image" placeholder="Enter an item image here" required>
-  <button type="submit">Post</button>
-</form>
+<div class="row post-form">
+  <div class="panel panel-default col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+    <div class="form-group">
+      <form name="$ctrl.postForm" ng-submit="$ctrl.postSubmission()">
+        <label class="col-lg-2">Title:</label>
+        <div class="col-lg-10">
+          <input id="title" name="title" ng-model="$ctrl.post.title" type="text" placeholder="Enter a title here" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Description:</label>
+        <div class="col-lg-10">
+          <input id="description" name="description"  type="text" ng-model="$ctrl.post.description" placeholder="Enter a description here" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Price:</label>
+        <div class="col-lg-10">
+          <input id="price" name="price" type="text" ng-model="$ctrl.post.price" placeholder="Enter a price here" class="form-control" required>
+        </div>
+        <label class="col-lg-2">Item Image:</label>
+        <div class="col-lg-10">
+          <input id="itemImage" name="itemImage" type="text" ng-model="$ctrl.post.item_image" placeholder="Enter an item image here" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary center">Post</button>
+      </form>
+    </div>
+  </div>
+</div>

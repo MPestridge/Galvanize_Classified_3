@@ -48,3 +48,68 @@
 .sort-list {
   list-style-type: none;
 }
+
+.post-panel-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.panel {
+  padding-left: 1rem;
+}
+
+.body-info {
+  padding-top: .925rem;
+}
+
+.img-block {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-container {
+  margin: auto;
+  padding-top: 5rem;
+  width: 350px;
+  height: 400px;
+}
+
+.panel-btns {
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.edit-btn {
+  text-align: left;
+  display: inline-block;
+}
+
+.delete-btn {
+  text-align: right;
+  display: inline-block;
+}
+
+.form-group {
+  margin-left: 1rem;
+}
+
+.form-control {
+  margin: 1rem;
+}
+
+label {
+  padding-top: 1.5rem;
+}
+
+.post-form {
+  margin-top: 2rem;
+}
+
+.edit-form {
+  margin-top: 2rem;
+}
+
+.edit-form-button {
+margin-bottom: 1.25rem;
+}
